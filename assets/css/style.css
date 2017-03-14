@@ -1,0 +1,338 @@
+/**
+ * @author
+ * Banjo Mofesola Paul
+ * Chief Developer, Planet NEST
+ * mofesolapaul@planetnest.org
+ * Monday, 13th March, 2017
+ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Open sans', sans-serif
+}
+
+.wrapper {
+	width: 100%;
+    height: 100%;
+    background: beige;
+    overflow: auto;
+    position: relative;
+}
+
+.chrome {
+    width: 320px;
+    height: 640px;
+    margin: 1.5em auto 0;
+    background: #000;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0 8px
+}
+
+.camera-pane, .screen, .nav-pane {
+	position: relative;
+}
+
+.camera-pane {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.screen {
+    background: #111;
+    height: 510px;
+}
+
+.nav-pane {
+    height: 70px;
+}
+
+.camera-pane > * {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.camera {
+    width: 15px;
+    height: 15px;
+    background: rgba(153, 153, 153, 0.5);
+    border-radius: 10px;
+    position: relative
+}
+
+.camera:before, .camera::before {
+    /* camera lens */
+
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 3.75px;
+    left: 3.75px;
+
+    background: -webkit-radial-gradient(#999, #000 40%) ;
+    background: -moz-radial-gradient(#999, #000 40%) ;
+    background: -ms-radial-gradient(#999, #000 40%) ;
+    background: -o-radial-gradient(#999, #000 40%) ;
+    background: radial-gradient(#999, #000 40%) ;
+}
+
+.speaker {
+    width: 50px;
+    height: 7px;
+    box-shadow: inset #333 0px 0px 1px 1px;
+    border-radius: 5px;
+    margin-left: 8px;
+    background-color: #555;
+    background-image: radial-gradient(#000, transparent 60%);
+    background-size: 2px 2px;
+}
+
+.proximity-sensor {
+	width: 15px;
+    height: 7px;
+    background: rgba(102, 102, 102, 0.5);
+    border-radius: 7px;
+    margin-left: 8px
+}
+
+.infrared-sensor {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 0, 0, 0.15);
+    border-radius: 15px;
+    position: absolute;
+    right: 1rem;
+    top: 20px;
+}
+
+.nav-pane > .box {
+	width: 33.333%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 70px;
+    color: #ccc
+}
+
+.boot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    z-index: -1;
+    animation: boot-out 5s ease-out;
+}
+
+.boot > .display {
+    position: relative;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+}
+
+.boot > .display > h3 {
+    font-family: Raleway;
+    margin-top: 0
+}
+
+.action-tray {
+    position: absolute;
+    width: 100%;
+    background: #e05337;
+    color: #fff;
+    font-weight: lighter;
+    font-size: smaller;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.action-tray > .left, .action-tray > .right {
+	width: 50%;
+    float: left;
+}
+
+.fa-battery-full {
+	transform: rotateY(189deg)
+}
+
+.action-tray > .right {
+    text-align: right;
+}
+
+.app {
+    position: relative;
+    height: 100%;
+    padding-top: 1.3rem;
+    box-sizing: border-box
+}
+
+.gmail-app {
+    background: white;
+    height: 100%;
+    position: relative;
+}
+
+.gmail-app > nav {
+	height: 48px;
+    background: tomato;
+    color: #fff;
+    line-height: 48px;
+}
+
+.gmail-app > .app-content {
+    height: calc(100% - 48px);
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.gmail-app .btn {
+	display: inline-block;
+    line-height: 48px;
+    width: 48px
+}
+
+.mails {
+	list-style-type: none;
+    padding: 0;
+    margin: 0 5px 5px
+}
+
+.mails > .item {
+    position: relative;
+    color: #999;
+    font-weight: lighter;
+    padding: 0.8rem 0;
+    box-sizing: border-box
+}
+
+.mails > .item > .dp {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: teal;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    float: left;
+    margin: 0 5px 0 2px
+}
+
+.mails > .item > .dp ~ * {
+    margin-left: 47px
+}
+
+.mails > .item > .sender {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 60px
+}
+
+.unread .sender, .unread .subject {
+    font-weight: bold;
+    color: #111
+}
+
+.mails .subject, .mails .brief, .mails .date {
+	font-size: small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mails > .item > .date {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    font-weight: lighter
+}
+
+.mails > .item > .brief {
+    padding-right: 20px;
+    position: relative;
+}
+
+.mails > .item .fav-icon {
+    position: absolute;
+    right: 0;
+    font-size: 120%;
+}
+
+.mails > .item + .item {
+    border-top: solid thin #ddd;
+}
+
+.item.color-1 .dp {
+    background: goldenrod
+}
+
+.item.color-2 .dp {
+    background: steelblue
+}
+
+.item.color-3 .dp {
+    background: purple
+}
+
+.item.color-4 .dp {
+    background: orange
+}
+
+.unread .date {
+    color: dodgerblue;
+    font-size: 70%;
+    font-weight: bold !important
+}
+
+.app-content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.app-content::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.floating-btn {
+    position: absolute;
+    background: tomato;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 1rem;
+    right: 1rem;
+    box-shadow: rgba(0,0,0,0.5) 1px 2px 10px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}

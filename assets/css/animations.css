@@ -1,0 +1,21 @@
+/**
+ * @author
+ * Banjo Mofesola Paul
+ * Chief Developer, Planet NEST
+ * mofesolapaul@planetnest.org
+ * Monday, March 13th, 2017
+ */
+
+@keyframes boot-out {
+    0%, 95% {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@-webkit-keyframes boot-out {
+    0%, 95% {
+        opacity: 1;
+        z-index: 2;
+    }
+}
