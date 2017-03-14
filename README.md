@@ -5,3 +5,4 @@ Complete modeling of a smartphone and the Gmail App on its screen, with HTML and
     Banjo Mofesola Paul
     
 ##### Contributors:
+* Dotun Longe 
