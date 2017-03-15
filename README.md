@@ -8,4 +8,5 @@ Complete modeling of a smartphone and the Gmail App on its screen, with HTML and
 
 ##### Contributors:
 * Dotun Longe 
+* Adeyemi Ifedayo
 * Veronica O Michael
