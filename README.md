@@ -1,7 +1,7 @@
 # gmail-app-css
 Complete modeling of a smartphone and the Gmail App on its screen, with HTML and CSS - by [**Devcribbers**](http://planetnest.org/devcrib)
 
-###project demo
+### project demo
 See the demo here at [devcrib.github.io/gmail-app-css](https://devcrib.github.io/gmail-app-css)
 
 ***
