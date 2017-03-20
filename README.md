@@ -17,3 +17,4 @@ See the demo here at [devcrib.github.io/gmail-app-css](https://devcrib.github.io
 * Veronica O Michael
 * Akinade Tunmise
 * Ajayi bolarinwa
+* Omotosho David Oluwatobiloba -[@Dylectus](https://github.com/Dylectus)-
